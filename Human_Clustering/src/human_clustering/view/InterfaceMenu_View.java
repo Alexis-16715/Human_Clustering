@@ -36,6 +36,14 @@ public class InterfaceMenu_View {
 	private JButton bottonExit;
 	
 	private URL iconApplication = getClass().getResource("/images/Icon Mark 3.png");
+	
+	
+	private URL iconForMenuSports = getClass().getResource("/images/SportsIcon.png");
+	private URL iconForMenuMusic = getClass().getResource("/images/MusicIcon.png");
+	private URL iconForMenuEntertainmentNews = getClass().getResource("/images/noticias del espectaculoIcon.png");
+	private URL iconForMenuScience = getClass().getResource("/images/MusicIcon.png");
+	
+	
 	private JPanel panel;
 	
 
@@ -47,6 +55,14 @@ public class InterfaceMenu_View {
 	private JLabel labelPersonRegisteredApplication;
 	
 	private int peopleRegisterApplication;
+	
+	
+	
+	
+	private JLabel labelImageSports;
+	private JLabel labelImageMusic;
+	private JLabel labelImageEntertainmentNews;
+	private JLabel labelImageScience;
 
 	
 	public InterfaceMenu_View() {
@@ -129,6 +145,29 @@ public class InterfaceMenu_View {
 		panel.setBounds(0, 0, 238, 761);
 		frame.getContentPane().add(panel);
 		
+		labelImageSports= new JLabel();
+		labelImageSports.setIcon(new ImageIcon(iconForMenuSports));
+		labelImageSports.setBounds(275, 39, 223, 225);
+		frame.getContentPane().add(labelImageSports);
+		
+		
+		labelImageMusic= new JLabel();
+		labelImageMusic.setIcon(new ImageIcon(iconForMenuMusic));
+		labelImageMusic.setBounds(730, 141, 223, 225);
+		frame.getContentPane().add(labelImageMusic);
+		
+		labelImageEntertainmentNews= new JLabel();
+		labelImageEntertainmentNews.setIcon(new ImageIcon(iconForMenuEntertainmentNews));
+		labelImageEntertainmentNews.setBounds(618, 491, 223, 225);
+		frame.getContentPane().add(labelImageEntertainmentNews);
+		
+		labelImageScience= new JLabel();
+		labelImageScience.setIcon(new ImageIcon(iconForMenuScience));
+		labelImageScience.setBounds(265, 457, 223, 225);
+		frame.getContentPane().add(labelImageScience);
+		
+		
+		
         
         
     }
@@ -143,6 +182,10 @@ public class InterfaceMenu_View {
     }
     
 	public void changeStateVisibleOrNotAllMenu() {
+		labelImageScience.setVisible(!labelImageScience.isVisible());
+		labelImageEntertainmentNews.setVisible(!labelImageEntertainmentNews.isVisible());
+		labelImageMusic.setVisible(!labelImageMusic.isVisible());
+		labelImageSports.setVisible(!labelImageSports.isVisible());
 		panel.setVisible(!panel.isVisible());
 		bottonRegisterPeople.setVisible(!bottonRegisterPeople.isVisible());
 		bottonSeeAllPeopleRegister.setVisible(!bottonSeeAllPeopleRegister.isVisible());
