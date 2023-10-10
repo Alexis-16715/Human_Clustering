@@ -73,8 +73,9 @@ public class InterfaceSeeAllPeopleRegister {
         	panelInformation[i].setBounds(300, (25+(i*65)), 600, 25);
 //    		frame.getContentPane().add(panelInformation[i]);
         	
-        	contentPanel.add(Box.createVerticalStrut(5));
+        	contentPanel.add(Box.createVerticalStrut(50));
         	contentPanel.add(panelInformation[i]);
+        	contentPanel.add(Box.createVerticalStrut(200));
     		
     		
     			
